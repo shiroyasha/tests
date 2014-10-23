@@ -1,0 +1,26 @@
+<head>
+  <title>test_app</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> todos}}
+</body>
+
+<template name="todos">
+  {{#each todos}}
+    {{> todo}}
+  {{/each}}
+
+  {{> createTodo}}
+</template>
+
+<template name="todo">
+  <p>{{name}}</p>
+</template>
+
+<template name="createTodo">
+  <input id="newTodo" type="text">
+  <button>Save</button>
+</template>
